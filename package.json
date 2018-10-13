@@ -1,0 +1,44 @@
+{
+  "name": "cs50-feedback-generator",
+  "version": "1.0.0",
+  "description": "Feedback Generator - CS50 final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciekChmura/CS50-feedback-generator.git"
+  },
+  "keywords": [
+    "CS50",
+    "javascript",
+    "react"
+  ],
+  "author": "Maciek Chmura",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciekChmura/CS50-feedback-generator/issues"
+  },
+  "homepage": "https://github.com/maciekChmura/CS50-feedback-generator#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "parcel-bundler": "^1.10.1",
+    "prettier": "^1.14.3"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
