@@ -5,11 +5,22 @@ import Selector from "./Selector";
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      checked: 0
+    };
   }
+
+  handleClick = data => {
+    this.setState({ checked: data });
+  };
+
   render() {
     return (
       <div>
-        <Selector />
+        <Selector
+          checkedRadio={this.state.checked}
+          handleClick={this.handleClick}
+        />
       </div>
     );
   }
