@@ -1,0 +1,27 @@
+.selector .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.child {
+  flex: none;
+
+  height: 30px;
+}
+
+.label {
+  width: 200px;
+  float: right;
+  display: flex;
+}
+
+.button-parent {
+  display: flex;
+  width: 260px;
+}
+
+.radio {
+  width: 40px;
+}

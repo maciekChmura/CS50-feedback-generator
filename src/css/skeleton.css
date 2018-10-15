@@ -516,43 +516,14 @@ hr {
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Self Clearing Goodness */
-/* .container:after,
+/*Self Clearing Goodness
+-------------------------------------------------- */
+.container:after,
 .row:after,
 .u-cf {
   content: "";
   display: table;
   clear: both;
-} */
-
-/* CS50 feedback generator
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.selector .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 400px;
-}
-
-.child {
-  flex: none;
-
-  height: 30px;
-}
-
-.label {
-  width: 200px;
-  float: right;
-  display: flex;
-}
-
-.button-parent {
-  display: flex;
-  width: 260px;
-}
-
-.radio {
-  width: 30px;
 }
 
 /* Media Queries
