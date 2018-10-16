@@ -10,9 +10,18 @@ class Selector extends React.Component {
     this.props.handleClick(+event.target.value);
   };
 
+  handleCheck = event => {
+    this.props.handleCheck(event.target.checked);
+  };
+
   render() {
     return (
       <form className="selector">
+        <input
+          type="checkbox"
+          onChange={this.handleCheck}
+          checked={this.props.used}
+        />
         <div className="child label">
           {this.props.name}: {this.props.checkedRadio}
         </div>
@@ -22,10 +31,10 @@ class Selector extends React.Component {
               key={value}
               className="radio"
               type="radio"
-              id="huey"
-              name="drone"
+              name="a"
               value={value}
               defaultChecked={this.props.checkedRadio === value}
+              disabled={!this.props.used}
             />
           ))}
         </div>

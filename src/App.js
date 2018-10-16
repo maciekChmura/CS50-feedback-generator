@@ -14,11 +14,13 @@ class App extends React.Component {
       selectors: [
         {
           name: "Quality of work",
-          checked: 0
+          checked: 0,
+          used: ""
         },
         {
           name: "test",
-          checked: 0
+          checked: 0,
+          used: ""
         }
       ],
       generated: "sample text"
@@ -31,7 +33,24 @@ class App extends React.Component {
         if (index === i) {
           return {
             name: selector.name,
-            checked: data
+            checked: data,
+            used: selector.used
+          };
+        } else {
+          return selector;
+        }
+      })
+    }));
+  };
+
+  handleCheck = (data, index) => {
+    this.setState(state => ({
+      selectors: state.selectors.map((selector, i) => {
+        if (index === i) {
+          return {
+            name: selector.name,
+            checked: selector.checked,
+            used: data
           };
         } else {
           return selector;
@@ -65,6 +84,8 @@ class App extends React.Component {
               name={selector.name}
               checkedRadio={selector.checked}
               handleClick={data => this.handleClick(data, index)}
+              handleCheck={data => this.handleCheck(data, index)}
+              used={selector.used}
             />
           );
         })}
