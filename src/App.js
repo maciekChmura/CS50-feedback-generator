@@ -6,7 +6,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: 0,
       selectors: [
         {
           name: "Quality of work",
@@ -21,16 +20,37 @@ class App extends React.Component {
   }
 
   handleClick = (data, index) => {
-    this.setState(state => {
-      state.selectors.map((selector, i) => {
+    this.setState(state => ({
+      selectors: state.selectors.map((selector, i) => {
         if (index === i) {
-          return (selector.checked = data);
+          return {
+            name: selector.name,
+            checked: data
+          };
         } else {
           return selector;
         }
-      });
-    });
+      })
+    }));
   };
+
+  // same handler but no implicit return
+  //
+  // handleClick = (data, index) => {
+  //   this.setState(state => {
+  //     const list = state.selectors.map((selector, i) => {
+  //       if (index === i) {
+  //         return {
+  //           name: selector.name,
+  //           checked: data
+  //         };
+  //       } else {
+  //         return selector;
+  //       }
+  //     });
+  //     return { selectors: list };
+  //   });
+  // };
 
   render() {
     return (
