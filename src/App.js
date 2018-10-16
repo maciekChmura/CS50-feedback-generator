@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import Selector from "./Selector";
 import InputName from "./InputName";
 import InputGender from "./InputGender";
+import TextArea from "./TextArea";
 
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +20,8 @@ class App extends React.Component {
           name: "test",
           checked: 0
         }
-      ]
+      ],
+      generated: "sample text"
     };
   }
 
@@ -66,6 +68,7 @@ class App extends React.Component {
             />
           );
         })}
+        <TextArea generated={this.state.generated} />
       </div>
     );
   }

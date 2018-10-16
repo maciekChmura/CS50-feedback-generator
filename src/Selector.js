@@ -13,23 +13,21 @@ class Selector extends React.Component {
   render() {
     return (
       <form className="selector">
-        <div className="container">
-          <div className="child label">
-            {this.props.name}: {this.props.checkedRadio}
-          </div>
-          <div className="child button-parent" onChange={this.handleClick}>
-            {this.inputs.map(value => (
-              <input
-                key={value}
-                className="radio"
-                type="radio"
-                id="huey"
-                name="drone"
-                value={value}
-                defaultChecked={this.props.checkedRadio === value}
-              />
-            ))}
-          </div>
+        <div className="child label">
+          {this.props.name}: {this.props.checkedRadio}
+        </div>
+        <div className="child button-parent" onChange={this.handleClick}>
+          {this.inputs.map(value => (
+            <input
+              key={value}
+              className="radio"
+              type="radio"
+              id="huey"
+              name="drone"
+              value={value}
+              defaultChecked={this.props.checkedRadio === value}
+            />
+          ))}
         </div>
       </form>
     );

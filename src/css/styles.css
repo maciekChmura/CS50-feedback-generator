@@ -2,7 +2,7 @@
   border: #0fa0ce 1px solid;
 } */
 
-.selector .container {
+.selector {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,4 +28,9 @@
 
 .radio {
   width: 40px;
+}
+
+.textarea {
+  min-height: 200px;
+  min-width: 400px;
 }
