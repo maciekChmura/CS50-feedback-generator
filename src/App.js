@@ -1,11 +1,15 @@
 import React from "react";
 import { render } from "react-dom";
 import Selector from "./Selector";
+import InputName from "./InputName";
+import InputGender from "./InputGender";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
+      gender: "",
       selectors: [
         {
           name: "Quality of work",
@@ -34,27 +38,24 @@ class App extends React.Component {
     }));
   };
 
-  // same handler but no implicit return
-  //
-  // handleClick = (data, index) => {
-  //   this.setState(state => {
-  //     const list = state.selectors.map((selector, i) => {
-  //       if (index === i) {
-  //         return {
-  //           name: selector.name,
-  //           checked: data
-  //         };
-  //       } else {
-  //         return selector;
-  //       }
-  //     });
-  //     return { selectors: list };
-  //   });
-  // };
+  handleNameChange = data => {
+    this.setState({ name: data });
+  };
+
+  handleGenderChange = data => {
+    this.setState({ gender: data });
+  };
 
   render() {
     return (
       <div>
+        <InputName
+          name={this.state.name}
+          handleNameChange={this.handleNameChange}
+        />
+        {this.state.name}
+        <InputGender handleGenderChange={this.handleGenderChange} />
+        {this.state.gender}
         {this.state.selectors.map((selector, index) => {
           return (
             <Selector
