@@ -15,7 +15,7 @@ class Selector extends React.Component {
       <form className="selector">
         <div className="container">
           <div className="child label">
-            Quality of work: {this.props.checkedRadio}
+            {this.props.name}: {this.props.checkedRadio}
           </div>
           <div className="child button-parent" onChange={this.handleClick}>
             {this.inputs.map(value => (
