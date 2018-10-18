@@ -4,6 +4,7 @@ import Selector from "./Selector";
 import InputName from "./InputName";
 import InputGender from "./InputGender";
 import TextArea from "./TextArea";
+import { database } from "./firebase";
 
 class App extends React.Component {
   constructor(props) {
@@ -15,15 +16,16 @@ class App extends React.Component {
         {
           name: "Quality of work",
           checked: 0,
-          used: ""
+          used: false
         },
         {
           name: "test",
           checked: 0,
-          used: ""
+          used: false
         }
       ],
-      generated: "sample text"
+      generated: "",
+      firebaseData: ""
     };
   }
 
@@ -67,6 +69,14 @@ class App extends React.Component {
     this.setState({ gender: data });
   };
 
+  handleGenerate = () => {
+    this.setState({ generated: "generated feedback" });
+  };
+
+  componentDidMount() {
+    database.ref().on("value", snapshot => console.log(snapshot.val()));
+  }
+
   render() {
     return (
       <div>
@@ -89,6 +99,9 @@ class App extends React.Component {
             />
           );
         })}
+        <div>
+          <button onClick={this.handleGenerate}>Generate</button>
+        </div>
         <TextArea generated={this.state.generated} />
       </div>
     );

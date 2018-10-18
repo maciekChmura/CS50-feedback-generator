@@ -6,7 +6,7 @@ class TextArea extends React.Component {
   }
 
   render() {
-    return <textarea className="textarea">{this.props.generated}</textarea>;
+    return <textarea value={this.props.generated} className="textarea" />;
   }
 }
 
