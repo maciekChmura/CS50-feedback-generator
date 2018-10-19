@@ -5,6 +5,7 @@ import InputName from "./InputName";
 import InputGender from "./InputGender";
 import TextArea from "./TextArea";
 import { database } from "./firebase";
+import data from "./data";
 
 class App extends React.Component {
   constructor(props) {
@@ -73,6 +74,10 @@ class App extends React.Component {
     this.setState({ generated: "generated feedback" });
   };
 
+  handlePushData = () => {
+    database.ref().set(data);
+  };
+
   componentDidMount() {
     database.ref().on("value", snapshot => console.log(snapshot.val()));
   }
@@ -99,6 +104,9 @@ class App extends React.Component {
             />
           );
         })}
+        <div>
+          <button onClick={this.handlePushData}>push data</button>
+        </div>
         <div>
           <button onClick={this.handleGenerate}>Generate</button>
         </div>
