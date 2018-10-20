@@ -123,8 +123,10 @@ class App extends React.Component {
   };
 
   handleGenerate = () => {
-    const { name, gender } = this.state;
+    this.setState({ generated: "" });
     let textArray = [];
+    const { name, gender } = this.state;
+
     for (let i = 0; i < this.state.selectors.length; i++) {
       const element = this.state.selectors[i];
       if (element.used === true) {
