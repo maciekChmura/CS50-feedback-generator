@@ -77,8 +77,7 @@ class App extends React.Component {
           used: false
         }
       ],
-      generated: "",
-      firebaseData: ""
+      generated: ""
     };
   }
 
@@ -153,6 +152,10 @@ class App extends React.Component {
     }
   };
 
+  handleReset = () => {
+    this.setState({ generated: "" });
+  };
+
   handlePushData = () => {
     database.ref().set(data);
   };
@@ -160,10 +163,6 @@ class App extends React.Component {
   checkInput = () => {
     return !!this.state.name && !!this.state.gender;
   };
-
-  // componentDidMount() {
-  //   database.ref().on("value", snapshot => console.log(snapshot.val()));
-  // }
 
   render() {
     return (
@@ -192,6 +191,9 @@ class App extends React.Component {
           handleGenerate={this.handleGenerate}
           inputStatus={this.checkInput()}
         />
+        <div>
+          <button onClick={this.handleReset}>Reset</button>
+        </div>
         <TextArea generated={this.state.generated} />
       </div>
     );

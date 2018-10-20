@@ -1,6 +1,5 @@
 const pickRandomFromArray = array => {
-  const length = array.length;
-  const value = Math.floor(Math.random() * length);
+  const value = Math.floor(Math.random() * array.length);
   return array[value];
 };
 
