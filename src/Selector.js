@@ -3,11 +3,17 @@ import React from "react";
 class Selector extends React.Component {
   constructor(props) {
     super(props);
-    this.inputs = [-2, -1, 0, 1, 2];
+    this.inputs = [
+      "poor",
+      "needs improvement",
+      "meets requirements",
+      "exceeds requirements",
+      "outstanding"
+    ];
   }
 
   handleClick = event => {
-    this.props.handleClick(+event.target.value);
+    this.props.handleClick(event.target.value);
   };
 
   handleCheck = event => {

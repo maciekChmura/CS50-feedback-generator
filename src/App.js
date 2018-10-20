@@ -6,6 +6,7 @@ import InputGender from "./InputGender";
 import TextArea from "./TextArea";
 import { database } from "./firebase";
 import data from "./data";
+import pickRandomFromArray from "./pickRandomFromArray";
 
 class App extends React.Component {
   constructor(props) {
@@ -15,14 +16,64 @@ class App extends React.Component {
       gender: "",
       selectors: [
         {
-          name: "Quality of work",
-          checked: 0,
-          used: false
+          name: "professional skills",
+          checked: "meets requirements",
+          used: true
         },
         {
-          name: "test",
-          checked: 0,
-          used: false
+          name: "quality of work",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "attitude and dedication",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "reliability",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "cooperativeness",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "adaptability",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "communication",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "problem solving",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "project planning and implementation",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "work group management",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "service to clients public",
+          checked: "meets requirements",
+          used: true
+        },
+        {
+          name: "performance planning",
+          checked: "meets requirements",
+          used: true
         }
       ],
       generated: "",
@@ -71,16 +122,30 @@ class App extends React.Component {
   };
 
   handleGenerate = () => {
-    this.setState({ generated: "generated feedback" });
+    const { name, gender } = this.state;
+    let textArray = [];
+    for (let i = 0; i < this.state.selectors.length; i++) {
+      const element = this.state.selectors[i];
+      if (element.used === true) {
+        database
+          .ref(`/${element.name}/${element.checked}`)
+          .on("value", snapshot => {
+            console.log(snapshot.val());
+            textArray.push(pickRandomFromArray(snapshot.val()));
+            const generatedText = textArray.join();
+            this.setState({ generated: generatedText });
+          });
+      }
+    }
   };
 
   handlePushData = () => {
     database.ref().set(data);
   };
 
-  componentDidMount() {
-    database.ref().on("value", snapshot => console.log(snapshot.val()));
-  }
+  // componentDidMount() {
+  //   database.ref().on("value", snapshot => console.log(snapshot.val()));
+  // }
 
   render() {
     return (
