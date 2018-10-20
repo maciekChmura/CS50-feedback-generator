@@ -7,6 +7,7 @@ import TextArea from "./TextArea";
 import { database } from "./firebase";
 import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
+import Generate from "./Generate";
 
 class App extends React.Component {
   constructor(props) {
@@ -23,57 +24,57 @@ class App extends React.Component {
         {
           name: "quality of work",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "attitude and dedication",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "reliability",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "cooperativeness",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "adaptability",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "communication",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "problem solving",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "project planning and implementation",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "work group management",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "service to clients public",
           checked: "meets requirements",
-          used: true
+          used: false
         },
         {
           name: "performance planning",
           checked: "meets requirements",
-          used: true
+          used: false
         }
       ],
       generated: "",
@@ -130,9 +131,20 @@ class App extends React.Component {
         database
           .ref(`/${element.name}/${element.checked}`)
           .on("value", snapshot => {
-            console.log(snapshot.val());
-            textArray.push(pickRandomFromArray(snapshot.val()));
-            const generatedText = textArray.join();
+            const singleProperty = pickRandomFromArray(snapshot.val())
+              .split(" ")
+              .map(element => {
+                if (element === "_name_") {
+                  return name;
+                } else if (element === "_gender_") {
+                  return gender === "male" ? "his" : "her";
+                } else {
+                  return element;
+                }
+              })
+              .join(" ");
+            textArray.push(singleProperty);
+            const generatedText = textArray.join(" ");
             this.setState({ generated: generatedText });
           });
       }
@@ -141,6 +153,10 @@ class App extends React.Component {
 
   handlePushData = () => {
     database.ref().set(data);
+  };
+
+  checkInput = () => {
+    return !!this.state.name && !!this.state.gender;
   };
 
   // componentDidMount() {
@@ -154,9 +170,7 @@ class App extends React.Component {
           name={this.state.name}
           handleNameChange={this.handleNameChange}
         />
-        {this.state.name}
         <InputGender handleGenderChange={this.handleGenderChange} />
-        {this.state.gender}
         {this.state.selectors.map((selector, index) => {
           return (
             <Selector
@@ -169,12 +183,13 @@ class App extends React.Component {
             />
           );
         })}
-        <div>
+        {/* <div>
           <button onClick={this.handlePushData}>push data</button>
-        </div>
-        <div>
-          <button onClick={this.handleGenerate}>Generate</button>
-        </div>
+        </div> */}
+        <Generate
+          handleGenerate={this.handleGenerate}
+          inputStatus={this.checkInput()}
+        />
         <TextArea generated={this.state.generated} />
       </div>
     );

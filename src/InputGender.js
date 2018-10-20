@@ -12,6 +12,7 @@ class InputGender extends React.Component {
   render() {
     return (
       <form>
+        Gender:
         <select
           onChange={this.handleGenderChange}
           onBlur={this.handleGenderChange}

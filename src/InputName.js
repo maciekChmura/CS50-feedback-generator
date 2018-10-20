@@ -12,11 +12,12 @@ class InputName extends React.Component {
   render() {
     return (
       <form>
+        Name:
         <input
           type="text"
           onChange={this.handleNameChange}
           value={this.props.name}
-          placeholder="Name"
+          placeholder="Jack"
         />
       </form>
     );
