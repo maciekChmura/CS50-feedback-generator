@@ -8,6 +8,7 @@ import { database } from "./firebase";
 import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
 import Generate from "./Generate";
+import Synonyms from "./Synonyms";
 
 class App extends React.Component {
   constructor(props) {
@@ -156,6 +157,10 @@ class App extends React.Component {
     this.setState({ generated: "" });
   };
 
+  handleTextAreaChange = data => {
+    this.setState({ generated: data });
+  };
+
   handlePushData = () => {
     database.ref().set(data);
   };
@@ -194,7 +199,11 @@ class App extends React.Component {
         <div>
           <button onClick={this.handleReset}>Reset</button>
         </div>
-        <TextArea generated={this.state.generated} />
+        <TextArea
+          generated={this.state.generated}
+          handleTextAreaChange={this.handleTextAreaChange}
+        />
+        <Synonyms />
       </div>
     );
   }

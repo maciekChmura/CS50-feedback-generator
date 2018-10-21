@@ -12,7 +12,7 @@ const data = {
       "_name_ required paperwork is completed late or is only partially complete."
     ],
     "meets requirements": [
-      "_name_ does not require constant supervision, and performs _gender_ work correctly",
+      "_name_ does not require constant supervision, and performs _gender_ work correctly.",
       "_name_ error rate is acceptable, and all work is completed timely.",
       "_name_ performs all tasks on time with acceptable amount of errors."
     ],
