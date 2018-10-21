@@ -29,8 +29,12 @@ class Selector extends React.Component {
           checked={this.props.used}
         />
         <div className="child label">
-          {this.props.name}: {this.props.checkedRadio}
+          <span>{this.props.name}:</span>
+          <span className="picked-selector-value">
+            {this.props.used ? this.props.checkedRadio : ""}
+          </span>
         </div>
+
         <div className="child button-parent" onChange={this.handleClick}>
           {this.inputs.map(value => (
             <input

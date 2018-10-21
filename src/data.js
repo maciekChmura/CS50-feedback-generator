@@ -19,7 +19,7 @@ const data = {
     "exceeds requirements": [
       "_name_ managers and co-workers have commented on high levels of _gender_ accuracy and work productivity.",
       "_name_ takes pride in work and strives to improve _gender_ work performance.",
-      "Many time work done by _name_ exceeds requirements. All task are performed with best practices"
+      "Many time work done by _name_ exceeds requirements. All task are performed with best practices."
     ],
     outstanding: [
       "_name_ has less than a 1% error rate on work product.",
@@ -29,141 +29,141 @@ const data = {
   },
   "quality of work": {
     poor: [
-      "Is distracted by non-work issues. Doesn’t focus enough energy and attention on the work to be done",
-      "Sets low goals and fails to meet them. Doesn’t regard productivity as a priority",
-      "Sees _gender_ personal output slipping and does nothing to stop it. Interferes with the performance of others",
-      "Displays disruptive or distracting behaviors. Often needs to redo _gender_ work",
-      "Rarely gets out of first gear. Regards productivity as someone else’s concern",
-      "Takes inappropriate or reckless shortcuts. Shows little interest in being more productive",
-      "Fails to fully engage in projects. Disregards suggestions to build productivity"
+      "Is distracted by non-work issues. Doesn’t focus enough energy and attention on the work to be done.",
+      "Sets low goals and fails to meet them. Doesn’t regard productivity as a priority.",
+      "Sees _gender_ personal output slipping and does nothing to stop it. Interferes with the performance of others.",
+      "Displays disruptive or distracting behaviors. Often needs to redo _gender_ work.",
+      "Rarely gets out of first gear. Regards productivity as someone else’s concern.",
+      "Takes inappropriate or reckless shortcuts. Shows little interest in being more productive.",
+      "Fails to fully engage in projects. Disregards suggestions to build productivity."
     ],
     "needs improvement": [
-      "Can work hard, but not consistently. Could be far more productive",
-      "Tends to set the bar too low. Does not exert consistent effort",
-      "Can meet the mark in terms of productivity, but frequently falls short. Blames productivity problems on others",
-      "Bogs down performance and productivity with _gender_ misdirected actions",
-      "Spends too much time on low-priority tasks. Works reactively rather than proactively",
-      "Tries to do just enough to get by. Is an amateur in the world of productivity",
-      "Sets aside quality. Talks about working productively, but rarely does so"
+      "Can work hard, but not consistently. Could be far more productive.",
+      "Tends to set the bar too low. Does not exert consistent effort.",
+      "Can meet the mark in terms of productivity, but frequently falls short. Blames productivity problems on others.",
+      "Bogs down performance and productivity with _gender_ misdirected actions.",
+      "Spends too much time on low-priority tasks. Works reactively rather than proactively.",
+      "Tries to do just enough to get by. Is an amateur in the world of productivity.",
+      "Sets aside quality. Talks about working productively, but rarely does so."
     ],
     "meets requirements": [
-      "Listens to feedback from colleagues for insights into possible improvements to the existing approaches to quality work. Solves issues with the current work and puts effective processes in place to prevent these issues from occurring,again",
-      "Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers. Delegates tasks to employees based on their strengths, weaknesses, and other behavioral styles that could affect the quality of work produced",
-      "Communicates projects' instructions effectively and asks team members to paraphrase what one has said to make sure that they have understood the concept. Creates a recognition program and hands out bonuses in order to show appreciation for employees' hard work and attention to quality standards",
-      "Organizes training sessions that focus on specific gaps, such as producing error free work, in order to improve employees performance. Gives new employees a clear sense of the company's core business strategy as well as an understanding of its products and services",
-      "Makes sure that all employees know what quality work means to the company and consistently communicates ways to improve work quality. Uses the company guideline or the project's task's specific style guide to measure the quality of the work produced",
-      "Constantly tracks a project in its early stages to identify and fix errors that could affect the overall quality of the project. Sends out surveys and asks clients for feedback in order to identify the clients' needs and work towards providing these needs",
-      "Avoids micromanaging; gives employees time to think for themselves and brainstorm ideas in order to produce exceptional results. Produces solid quality and quantity of work",
-      "Helps others work better. Shares insights to improve productivity. Works with the team to build output",
-      "Has been improving _gender_ productivity. Understands how to produce more. Puts in extra hours to get the desired results",
-      "Builds productivity by being well organized. Fully embraces the need for greater productivity"
+      "Listens to feedback from colleagues for insights into possible improvements to the existing approaches to quality work. Solves issues with the current work and puts effective processes in place to prevent these issues from occurring,again.",
+      "Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers. Delegates tasks to employees based on their strengths, weaknesses, and other behavioral styles that could affect the quality of work produced.",
+      "Communicates projects' instructions effectively and asks team members to paraphrase what one has said to make sure that they have understood the concept. Creates a recognition program and hands out bonuses in order to show appreciation for employees' hard work and attention to quality standards.",
+      "Organizes training sessions that focus on specific gaps, such as producing error free work, in order to improve employees performance. Gives new employees a clear sense of the company's core business strategy as well as an understanding of its products and services.",
+      "Makes sure that all employees know what quality work means to the company and consistently communicates ways to improve work quality. Uses the company guideline or the project's task's specific style guide to measure the quality of the work produced.",
+      "Constantly tracks a project in its early stages to identify and fix errors that could affect the overall quality of the project. Sends out surveys and asks clients for feedback in order to identify the clients' needs and work towards providing these needs.",
+      "Avoids micromanaging; gives employees time to think for themselves and brainstorm ideas in order to produce exceptional results. Produces solid quality and quantity of work.",
+      "Helps others work better. Shares insights to improve productivity. Works with the team to build output.",
+      "Has been improving _gender_ productivity. Understands how to produce more. Puts in extra hours to get the desired results.",
+      "Builds productivity by being well organized. Fully embraces the need for greater productivity."
     ],
     "exceeds requirements": [
-      "Trains employees at all levels about quality in order to make them know that they need to produce quality work regardless of their role in the company. Listens to feedback from employees for insights into possible improvements to the existing approaches to quality work",
-      "Solves issues with the current work and puts effective processes in place to prevent these issues from occurring again. Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers",
-      "Makes use of the available quality management systems and tools to ensure high work standards. Is motivated to be highly productive. Gives team members quality goals that are challenging but attainable in order to improve their performance",
-      "Has steadily increased personal output. Provides suggestions that enhance productivity. Serves as an excellent role model of productive behavior",
-      "Focuses on people as well as productivity. Is productive under less-than-perfect conditions. Sets up a new employee's initiation program in order to train new workers on quality standards as soon as they start performing their roles",
+      "Trains employees at all levels about quality in order to make them know that they need to produce quality work regardless of their role in the company. Listens to feedback from employees for insights into possible improvements to the existing approaches to quality work.",
+      "Solves issues with the current work and puts effective processes in place to prevent these issues from occurring again. Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers.",
+      "Makes use of the available quality management systems and tools to ensure high work standards. Is motivated to be highly productive. Gives team members quality goals that are challenging but attainable in order to improve their performance.",
+      "Has steadily increased personal output. Provides suggestions that enhance productivity. Serves as an excellent role model of productive behavior.",
+      "Focuses on people as well as productivity. Is productive under less-than-perfect conditions. Sets up a new employee's initiation program in order to train new workers on quality standards as soon as they start performing their roles.",
       "Makes others more productive. Generates and implements creative ideas. Turns challenges into opportunities",
-      "Works directly with others to enhance their productivity. Quickly incorporates new knowledge to build productivity",
-      "Is eager to learn about ways to be more productive. Conducts regular performance reviews of team members to let them identify what they have done well and areas that need improvement",
-      "Takes on any task. Is productive beyond standard requirements. Ties the employees' performance to the overall company performance in order to make them feel responsible for producing quality work. Single-handedly led to the success of the XYZ project through _gender_ efforts",
-      "Is regarded as a productivity guru. Recognizes and rewards employees who have consistently produced quality work in order to keep them motivated to continue working hard"
+      "Works directly with others to enhance their productivity. Quickly incorporates new knowledge to build productivity.",
+      "Is eager to learn about ways to be more productive. Conducts regular performance reviews of team members to let them identify what they have done well and areas that need improvement.",
+      "Takes on any task. Is productive beyond standard requirements. Ties the employees' performance to the overall company performance in order to make them feel responsible for producing quality work. Single-handedly led to the success of the XYZ project through _gender_ efforts.",
+      "Is regarded as a productivity guru. Recognizes and rewards employees who have consistently produced quality work in order to keep them motivated to continue working hard."
     ],
     outstanding: [
-      "Produces a remarkable amount of high-quality work. Inspires others with his output. Sets a new standard for productivity",
-      "Puts the “pro” in productivity. Monitors productivity and implements upgrades as needed",
-      "Dazzles everyone with the quality and quantity of _gender_ work. Is productivity minded",
+      "Produces a remarkable amount of high-quality work. Inspires others with his output. Sets a new standard for productivity.",
+      "Puts the “pro” in productivity. Monitors productivity and implements upgrades as needed.",
+      "Dazzles everyone with the quality and quantity of _gender_ work. Is productivity minded.",
       "Identifies and implements steps to enhance output. Regards productivity as a top priority.",
-      "Is responsible for a major increase in departmental productivity. Always goes the extra mile(s). Always seeks opportunities to be even more productive",
-      "Fully understands the figures behind productivity. Raises the bar for everyone. Works hard and works smart",
-      "Is energized by challenges that would derail others. Streamlines departmental operations. Offers outstanding suggestions to increase productivity"
+      "Is responsible for a major increase in departmental productivity. Always goes the extra mile(s). Always seeks opportunities to be even more productive.",
+      "Fully understands the figures behind productivity. Raises the bar for everyone. Works hard and works smart.",
+      "Is energized by challenges that would derail others. Streamlines departmental operations. Offers outstanding suggestions to increase productivity."
     ]
   },
   "attitude and dedication": {
     poor: [
-      "_name_ is always late to work. Often takes long to come back to the office after breaks",
-      "Only dedicated to the company whenever it is convenient to do so. Claims dedication to the company but takes no significant steps to show it",
-      "Speaks negatively about the business but positively about the co-worker's competition. Highly critical of the company's policies, values, goals, and vision",
-      "Uses company time to advance personal agenda rather the company's agenda. Very likely to spend time complaining rather than doing the expected",
-      "Does not wait to hear all the facts but already spells out a no. Gets into trouble for demoralizing other workers who are giving it their best. Very lazy in a group setting, always sitting and watching others move by"
+      "_name_ is always late to work. Often takes long to come back to the office after breaks.",
+      "Only dedicated to the company whenever it is convenient to do so. Claims dedication to the company but takes no significant steps to show it.",
+      "Speaks negatively about the business but positively about the co-worker's competition. Highly critical of the company's policies, values, goals, and vision.",
+      "Uses company time to advance personal agenda rather the company's agenda. Very likely to spend time complaining rather than doing the expected.",
+      "Does not wait to hear all the facts but already spells out a no. Gets into trouble for demoralizing other workers who are giving it their best. Very lazy in a group setting, always sitting and watching others move by."
     ],
     "needs improvement": [
-      "_name_ takes more time than necessary to complete a meeting",
-      "Gives all the tasks intermittent attention rather than concentrated attention",
-      "_name_ is sometimes late to work"
+      "_name_ takes more time than necessary to complete a meeting.",
+      "Gives all the tasks intermittent attention rather than concentrated attention.",
+      "_name_ is sometimes late to work."
     ],
     "meets requirements": [
-      "_name_ attends all the team meetings. Always willing to accept extra assignments without counting how much more work is ahead",
-      "Takes pride in demonstrating dedication to the company through hard work. Maintains a strong personal commitment to the company's goals all the time",
-      "Always ready to jump in and get the project done as expected. Actively seeks the more challenging tasks and does them with ease",
-      "Seeks opportunities to coach others on how to selflessly give the very best. Never says 'I can't' when any project is released even the tough, challenging ones",
-      "Focuses on innovating new ideas on how to do more tasks easily. Coaches other coworkers on how to utilize the supplied resources for the benefit of the company",
-      "Carries an attitude of a winner everywhere, in every task given"
+      "_name_ attends all the team meetings. Always willing to accept extra assignments without counting how much more work is ahead.",
+      "Takes pride in demonstrating dedication to the company through hard work. Maintains a strong personal commitment to the company's goals all the time.",
+      "Always ready to jump in and get the project done as expected. Actively seeks the more challenging tasks and does them with ease.",
+      "Seeks opportunities to coach others on how to selflessly give the very best. Never says 'I can't' when any project is released even the tough, challenging ones.",
+      "Focuses on innovating new ideas on how to do more tasks easily. Coaches other coworkers on how to utilize the supplied resources for the benefit of the company.",
+      "Carries an attitude of a winner everywhere, in every task given."
     ],
     "exceeds requirements": [
-      "Puts in astounding amount of time in projects to make them a success. Foregoes personal opportunities to keep work commitments flowing successfully in the company",
-      "Displays an unwavering dedication to the company and its mission. Puts in extra hours to finish work without being asked to do so",
+      "Puts in astounding amount of time in projects to make them a success. Foregoes personal opportunities to keep work commitments flowing successfully in the company.",
+      "Displays an unwavering dedication to the company and its mission. Puts in extra hours to finish work without being asked to do so.",
       "Very engaged at the project. Carries a can-do attitude and does the best in all the projects",
-      "Actively seek out opportunities to take on the most demanding and difficult tasks. Focuses on what can be done rather than on what can't be done",
-      "Has a high positive impact on the attitudes and performance of the coworkers"
+      "Actively seek out opportunities to take on the most demanding and difficult tasks. Focuses on what can be done rather than on what can't be done.",
+      "Has a high positive impact on the attitudes and performance of the coworkers."
     ],
     outstanding: [
-      "Works on overtime whenever needed to ensure deadlines are met",
-      "Has a very high positive impact on the attitudes and performance of the coworkers",
-      "Highly certain of the ability to get any job done and done well"
+      "Works on overtime whenever needed to ensure deadlines are met.",
+      "Has a very high positive impact on the attitudes and performance of the coworkers.",
+      "Highly certain of the ability to get any job done and done well."
     ]
   },
   "self development": {
     poor: [
-      "Has established no goals to further develop his skills, abilities, or expertise",
-      "Accepts no responsibility for setting _gender_ own personal goals",
-      "Has had the same personal goals for an extended period of time and has failed to meet any of them",
-      "Gives up easily in the pursuit of his personal goals",
-      "Jumps from one personal goal to another but reaches none",
-      "Pursues personal goals at the expense of performance goals"
+      "Has established no goals to further develop his skills, abilities, or expertise.",
+      "Accepts no responsibility for setting _gender_ own personal goals.",
+      "Has had the same personal goals for an extended period of time and has failed to meet any of them.",
+      "Gives up easily in the pursuit of his personal goals.",
+      "Jumps from one personal goal to another but reaches none.",
+      "Pursues personal goals at the expense of performance goals."
     ],
     "needs improvement": [
-      "Sets personal goals, but none that would enhance _gender_ performance on the job",
-      "Takes no serious steps to meet _gender_ personal goals",
-      "Sets very general personal goals",
-      "Sets unchallenging personal goals",
-      "Hasn’t made a serious commitment to meeting _gender_ personal goals",
-      "Sets lofty personal goals but has no plans or strategies to meet them",
-      "Demonstrates very little persistence in the pursuit of personal goals"
+      "Sets personal goals, but none that would enhance _gender_ performance on the job.",
+      "Takes no serious steps to meet _gender_ personal goals.",
+      "Sets very general personal goals.",
+      "Sets unchallenging personal goals.",
+      "Hasn’t made a serious commitment to meeting _gender_ personal goals.",
+      "Sets lofty personal goals but has no plans or strategies to meet them.",
+      "Demonstrates very little persistence in the pursuit of personal goals."
     ],
     "meets requirements": [
-      "Takes _gender_ personal goals seriously. Listens to counsel from others regarding her personal goals and the best strategies to meet them",
-      "Sets challenging yet realistic goals regarding _gender_ skills, education, and career",
-      "Has established personal goals and a path to meet them",
-      "Obtains the training that is needed to achieve _gender_ personal goals",
-      "Helps other employees determine their personal goals",
-      "Shows a high degree of tenacity in pursuing _gender_ personal goals"
+      "Takes _gender_ personal goals seriously. Listens to counsel from others regarding her personal goals and the best strategies to meet them.",
+      "Sets challenging yet realistic goals regarding _gender_ skills, education, and career.",
+      "Has established personal goals and a path to meet them.",
+      "Obtains the training that is needed to achieve _gender_ personal goals.",
+      "Helps other employees determine their personal goals.",
+      "Shows a high degree of tenacity in pursuing _gender_ personal goals."
     ],
     "exceeds requirements": [
-      "Establishes clear, specific, and measurable personal goals",
-      "Has attained _gender_ personal goals, which has led to markedly improved performance",
-      "Sets goals that are all accompanied by well-designed action plans",
-      "Devotes major effort to reaching _gender_ personal goals",
-      "Is able to meet _gender_ personal goals while also meeting _gender_ performance goals",
-      "Continues to set increasingly challenging personal goals",
-      "Shows great confidence regarding _gender_ ability to meet personal goals"
+      "Establishes clear, specific, and measurable personal goals.",
+      "Has attained _gender_ personal goals, which has led to markedly improved performance.",
+      "Sets goals that are all accompanied by well-designed action plans.",
+      "Devotes major effort to reaching _gender_ personal goals.",
+      "Is able to meet _gender_ personal goals while also meeting _gender_ performance goals.",
+      "Continues to set increasingly challenging personal goals.",
+      "Shows great confidence regarding _gender_ ability to meet personal goals."
     ],
     outstanding: [
-      "Has a clear vision of _gender_ future and works diligently to make it a reality",
-      "Has a strong personal goal orientation, which has inspired fellow employees to follow suit",
-      "Strives to attain personal goals that easily elude others",
-      "Takes responsibility for _gender_ personal growth and development",
-      "Consistently meets _gender_ personal objectives and then sets new ones that are even more challenging",
-      "Establishes clear and challenging short-term and long-term personal goals",
-      "Demonstrates great initiative and energy in pursuing _gender_ personal goals"
+      "Has a clear vision of _gender_ future and works diligently to make it a reality.",
+      "Has a strong personal goal orientation, which has inspired fellow employees to follow suit.",
+      "Strives to attain personal goals that easily elude others.",
+      "Takes responsibility for _gender_ personal growth and development.",
+      "Consistently meets _gender_ personal objectives and then sets new ones that are even more challenging.",
+      "Establishes clear and challenging short-term and long-term personal goals.",
+      "Demonstrates great initiative and energy in pursuing _gender_ personal goals."
     ]
   },
   reliability: {
     poor: [
       "Often calls in to work without prior approval, resulting in excessive unscheduled absences.",
       "Leaves the work area unattended to run personal errands.",
-      "Is frequently late to work",
+      "Is frequently late to work.",
       "Frequently leaves work early."
     ],
     "needs improvement": [
@@ -248,17 +248,17 @@ const data = {
     ],
     "exceeds requirements": [
       "Students and coworkers feel comfortable coming to this employee with questions and comments.",
-      "Comes to supervisor department head with any questions that employee does not know off-hand"
+      "Comes to supervisor department head with any questions that employee does not know off-hand."
     ],
     outstanding: [
       "Always asks questions and seeks guidance when not sure of what to do.",
       "Demonstrates excellent oral and written communication skills.",
-      "Effectively communicates his her point of view and expectations",
-      "Effectively manages communication at all levels (lateral, upward, or downward flow of communication)",
-      "Effectively manages and facilitates meetings and group discussions",
-      "Promotes action task oriented meetings ",
-      "Effectively enforces company values and polices without evoking negative reactions ",
-      "Effectively communicates with clients "
+      "Effectively communicates his her point of view and expectations.",
+      "Effectively manages communication at all levels (lateral, upward, or downward flow of communication).",
+      "Effectively manages and facilitates meetings and group discussions.",
+      "Promotes action task oriented meetings.",
+      "Effectively enforces company values and polices without evoking negative reactions.",
+      "Effectively communicates with clients."
     ]
   },
   "problem solving": {
@@ -284,7 +284,7 @@ const data = {
       "Conducts research or seeks counsel of experts to gather information needed in making actual decisions."
     ]
   },
-  "project planning and implementation": {
+  "project planning": {
     poor: [
       "Work projects have suffered from lack of follow-through.",
       "Important documentation for projects has been lost or destroyed erroneously.",

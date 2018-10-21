@@ -2,23 +2,42 @@
   border: #0fa0ce 1px solid;
 } */
 
+form {
+  margin-bottom: 0;
+}
+
+button {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
 .selector {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 400px;
+  height: 58px;
+  width: 500px;
 }
 
 .child {
   flex: none;
 
-  height: 30px;
+  height: 46px;
 }
 
 .label {
   width: 200px;
   float: right;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.picked-selector-value {
+  font-size: 90%;
 }
 
 .button-parent {
@@ -27,10 +46,22 @@
 }
 
 .radio {
-  width: 40px;
+  width: 50px;
 }
 
 .textarea {
   min-height: 400px;
   min-width: 600px;
+}
+
+.synonyms-box {
+  height: 320px;
+  border: 0px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 60px;
+}
+
+.synonyms-list-item {
+  margin-left: 10px;
 }

@@ -58,7 +58,7 @@ class App extends React.Component {
           used: false
         },
         {
-          name: "project planning and implementation",
+          name: "project planning",
           checked: "meets requirements",
           used: false
         },
@@ -189,9 +189,7 @@ class App extends React.Component {
             />
           );
         })}
-        {/* <div>
-          <button onClick={this.handlePushData}>push data</button>
-        </div> */}
+
         <Generate
           handleGenerate={this.handleGenerate}
           inputStatus={this.checkInput()}
@@ -204,6 +202,9 @@ class App extends React.Component {
           handleTextAreaChange={this.handleTextAreaChange}
         />
         <Synonyms />
+        {/* <div>
+          <button onClick={this.handlePushData}>push data</button>
+        </div> */}
       </div>
     );
   }

@@ -20,14 +20,14 @@ class Synonyms extends React.Component {
     event.preventDefault();
     fetch(`http://words.bighugelabs.com/api/2/${key}/${this.state.word}/json`)
       .then(data => data.json())
-      .then(data => data.noun.syn.slice(0, 5))
+      .then(data => data.noun.syn.slice(0, 6))
       .then(data => this.setState({ synonyms: data }))
       .catch(error => this.setState({ synonyms: ["nothing found"] }));
   };
 
   render() {
     return (
-      <form>
+      <form className="synonyms-box">
         <div>
           <p>Search for synonyms</p>
         </div>
@@ -38,7 +38,15 @@ class Synonyms extends React.Component {
           placeholder="search for..."
         />
         <button onClick={this.handleSearch}>search</button>
-        <p>{this.state.synonyms}</p>
+        <ul>
+          {this.state.synonyms.map(synonym => {
+            return (
+              <li className="synonyms-list-item" key={synonym}>
+                {synonym}
+              </li>
+            );
+          })}
+        </ul>
       </form>
     );
   }
