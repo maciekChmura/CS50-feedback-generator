@@ -1,34 +1,47 @@
 const data = {
   "professional skills": {
-    poor: [
+    unacceptable: [
       "_name_ has made frequent errors that are harmful to business operations.",
       "The supervisor head has received numerous complaints about _name_ and the quality of _gender_ work.",
       "The quality of work produced by _name_ is unacceptable.",
       "_name_ does not complete _gender_ required tasks."
     ],
-    "needs improvement": [
+    low: [
       "_name_ is not as careful in checking work product for errors as _gender_ could be.",
       "_name_ tends to miss small errors in work product.",
-      "_name_ required paperwork is completed late or is only partially complete."
+      "_name_ required paperwork is completed late or is only partially complete.",
+      "_name_ sometimes _name_ forgets about important tasks.",
+      "_name_ lags behind others in keeping technical skills current and has a negative attitude towards learning complex skills.",
+      "_name_ demonstrates little knowledge about how complex systems and processes work.",
+      "_name_ is slow at learning new technologies and makes little effort to remain updated with technology."
     ],
-    "meets requirements": [
+    ok: [
       "_name_ does not require constant supervision, and performs _gender_ work correctly.",
       "_name_ error rate is acceptable, and all work is completed timely.",
-      "_name_ performs all tasks on time with acceptable amount of errors."
+      "_name_ performs all tasks on time with acceptable amount of errors.",
+      "_name_ welcomes chances to learn new skills and seeks for opportunities that enhance knowledge in existing skills.",
+      "_name_ shows interest to understand how complex systems and processes work.",
+      "_name_ seeks for assistance when solving complicated problems and does not shy away from new challenges.",
+      "_name_ demonstrates basic understanding of coding and programming and can design simple programs."
     ],
-    "exceeds requirements": [
+    good: [
       "_name_ managers and co-workers have commented on high levels of _gender_ accuracy and work productivity.",
       "_name_ takes pride in work and strives to improve _gender_ work performance.",
-      "Many time work done by _name_ exceeds requirements. All task are performed with best practices."
+      "Many time work done by _name_ good. All task are performed with best practices.",
+      "Many time _name_ goes an extra mile with _gender_ tasks",
+      "Produces excellent results in complex fields of expertise and performs complex tasks as if they are simple.",
+      "Demonstrates exceptional knowledge about how complex systems and processes work.",
+      "_name_ is always a step ahead of others in working with new systems.",
+      "Demonstrates exceptional professionalism and confidence when solving complicated issues and always welcomes new challenges"
     ],
     outstanding: [
-      "_name_ has less than a 1% error rate on work product.",
+      "_name_ has less than 1% error rate on work product.",
       "_name_ accuracy is excellent.",
       "Work produced by _name_ is outstanding and above all requirements."
     ]
   },
   "quality of work": {
-    poor: [
+    unacceptable: [
       "Is distracted by non-work issues. Doesn’t focus enough energy and attention on the work to be done.",
       "Sets low goals and fails to meet them. Doesn’t regard productivity as a priority.",
       "Sees _gender_ personal output slipping and does nothing to stop it. Interferes with the performance of others.",
@@ -37,7 +50,7 @@ const data = {
       "Takes inappropriate or reckless shortcuts. Shows little interest in being more productive.",
       "Fails to fully engage in projects. Disregards suggestions to build productivity."
     ],
-    "needs improvement": [
+    low: [
       "Can work hard, but not consistently. Could be far more productive.",
       "Tends to set the bar too low. Does not exert consistent effort.",
       "Can meet the mark in terms of productivity, but frequently falls short. Blames productivity problems on others.",
@@ -46,7 +59,7 @@ const data = {
       "Tries to do just enough to get by. Is an amateur in the world of productivity.",
       "Sets aside quality. Talks about working productively, but rarely does so."
     ],
-    "meets requirements": [
+    ok: [
       "Listens to feedback from colleagues for insights into possible improvements to the existing approaches to quality work. Solves issues with the current work and puts effective processes in place to prevent these issues from occurring,again.",
       "Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers. Delegates tasks to employees based on their strengths, weaknesses, and other behavioral styles that could affect the quality of work produced.",
       "Communicates projects' instructions effectively and asks team members to paraphrase what one has said to make sure that they have understood the concept. Creates a recognition program and hands out bonuses in order to show appreciation for employees' hard work and attention to quality standards.",
@@ -58,7 +71,7 @@ const data = {
       "Has been improving _gender_ productivity. Understands how to produce more. Puts in extra hours to get the desired results.",
       "Builds productivity by being well organized. Fully embraces the need for greater productivity."
     ],
-    "exceeds requirements": [
+    good: [
       "Trains employees at all levels about quality in order to make them know that they need to produce quality work regardless of their role in the company. Listens to feedback from employees for insights into possible improvements to the existing approaches to quality work.",
       "Solves issues with the current work and puts effective processes in place to prevent these issues from occurring again. Maintains a clear vision statement that communicates the company's core values and standards to both the employees and customers.",
       "Makes use of the available quality management systems and tools to ensure high work standards. Is motivated to be highly productive. Gives team members quality goals that are challenging but attainable in order to improve their performance.",
@@ -81,19 +94,19 @@ const data = {
     ]
   },
   "attitude and dedication": {
-    poor: [
+    unacceptable: [
       "_name_ is always late to work. Often takes long to come back to the office after breaks.",
       "Only dedicated to the company whenever it is convenient to do so. Claims dedication to the company but takes no significant steps to show it.",
       "Speaks negatively about the business but positively about the co-worker's competition. Highly critical of the company's policies, values, goals, and vision.",
       "Uses company time to advance personal agenda rather the company's agenda. Very likely to spend time complaining rather than doing the expected.",
       "Does not wait to hear all the facts but already spells out a no. Gets into trouble for demoralizing other workers who are giving it their best. Very lazy in a group setting, always sitting and watching others move by."
     ],
-    "needs improvement": [
+    low: [
       "_name_ takes more time than necessary to complete a meeting.",
       "Gives all the tasks intermittent attention rather than concentrated attention.",
       "_name_ is sometimes late to work."
     ],
-    "meets requirements": [
+    ok: [
       "_name_ attends all the team meetings. Always willing to accept extra assignments without counting how much more work is ahead.",
       "Takes pride in demonstrating dedication to the company through hard work. Maintains a strong personal commitment to the company's goals all the time.",
       "Always ready to jump in and get the project done as expected. Actively seeks the more challenging tasks and does them with ease.",
@@ -101,7 +114,7 @@ const data = {
       "Focuses on innovating new ideas on how to do more tasks easily. Coaches other coworkers on how to utilize the supplied resources for the benefit of the company.",
       "Carries an attitude of a winner everywhere, in every task given."
     ],
-    "exceeds requirements": [
+    good: [
       "Puts in astounding amount of time in projects to make them a success. Foregoes personal opportunities to keep work commitments flowing successfully in the company.",
       "Displays an unwavering dedication to the company and its mission. Puts in extra hours to finish work without being asked to do so.",
       "Very engaged at the project. Carries a can-do attitude and does the best in all the projects",
@@ -115,7 +128,7 @@ const data = {
     ]
   },
   "self development": {
-    poor: [
+    unacceptable: [
       "Has established no goals to further develop his skills, abilities, or expertise.",
       "Accepts no responsibility for setting _gender_ own personal goals.",
       "Has had the same personal goals for an extended period of time and has failed to meet any of them.",
@@ -123,7 +136,7 @@ const data = {
       "Jumps from one personal goal to another but reaches none.",
       "Pursues personal goals at the expense of performance goals."
     ],
-    "needs improvement": [
+    low: [
       "Sets personal goals, but none that would enhance _gender_ performance on the job.",
       "Takes no serious steps to meet _gender_ personal goals.",
       "Sets very general personal goals.",
@@ -132,7 +145,7 @@ const data = {
       "Sets lofty personal goals but has no plans or strategies to meet them.",
       "Demonstrates very little persistence in the pursuit of personal goals."
     ],
-    "meets requirements": [
+    ok: [
       "Takes _gender_ personal goals seriously. Listens to counsel from others regarding her personal goals and the best strategies to meet them.",
       "Sets challenging yet realistic goals regarding _gender_ skills, education, and career.",
       "Has established personal goals and a path to meet them.",
@@ -140,7 +153,7 @@ const data = {
       "Helps other employees determine their personal goals.",
       "Shows a high degree of tenacity in pursuing _gender_ personal goals."
     ],
-    "exceeds requirements": [
+    good: [
       "Establishes clear, specific, and measurable personal goals.",
       "Has attained _gender_ personal goals, which has led to markedly improved performance.",
       "Sets goals that are all accompanied by well-designed action plans.",
@@ -160,24 +173,24 @@ const data = {
     ]
   },
   reliability: {
-    poor: [
+    unacceptable: [
       "Often calls in to work without prior approval, resulting in excessive unscheduled absences.",
       "Leaves the work area unattended to run personal errands.",
       "Is frequently late to work.",
       "Frequently leaves work early."
     ],
-    "needs improvement": [
+    low: [
       "Occasionally calls in to work without prior approval, resulting in unscheduled absences.",
       "Occasionally arrives late to work.",
       "Sometimes does not make sure all work is completed before leaving for the day.",
       "Occasionally leaves work early."
     ],
-    "meets requirements": [
+    ok: [
       "Consistently arrives to work on time.",
       "Makes sure work area is covered at all times.",
       "Has had no unscheduled absences, except for documented emergencies."
     ],
-    "exceeds requirements": [
+    good: [
       "Has a good attendance record.",
       "Can always be counted on to work overtime when necessary without complaint."
     ],
@@ -188,21 +201,21 @@ const data = {
     ]
   },
   cooperativeness: {
-    poor: [
+    unacceptable: [
       "Projects an attitude of superiority that turns off other employees.",
       "Not cooperative and frequently criticizes others.",
       "Displays excessive negativity when working with others."
     ],
-    "needs improvement": [
+    low: [
       "Displays occasional negativity when working with others.",
       "Rarely offers to assist others in the office.",
       "Makes negative comments that affect working relationships with others."
     ],
-    "meets requirements": [
+    ok: [
       "Is usually able to answer customer questions.",
       "Maintains good working relationships with coworkers."
     ],
-    "exceeds requirements": [
+    good: [
       "Demonstrates “team player” behavior views individual success as imperative to group success.",
       "Direct, straightforward, honest and polite."
     ],
@@ -212,19 +225,19 @@ const data = {
     ]
   },
   adaptability: {
-    poor: [
+    unacceptable: [
       "Usually needs direct supervision, even for mundane and everyday tasks.",
       "Is not able to think independently or to deal with unexpected occurrences."
     ],
-    "needs improvement": [
+    low: [
       "Gets flustered in unusual situations.",
       "Does not always make the best decisions to fit the situation."
     ],
-    "meets requirements": [
+    ok: [
       "Usually adjusts well to changes in the work place.",
       "Maintains good customer service relations, even under stress."
     ],
-    "exceeds requirements": [
+    good: [
       "Looks for ways to streamline procedures to improve efficiency and customer service.",
       "Sets priorities and adjusts them as needed when unexpected situations arise."
     ],
@@ -234,19 +247,19 @@ const data = {
     ]
   },
   communication: {
-    poor: [
+    unacceptable: [
       "Reports, forms, memos and correspondence are often completed late or not at all.",
       "Uses a condescending tone when talking to others in the office."
     ],
-    "needs improvement": [
+    low: [
       "The supervisor department head has received a few complaints about contradictory or bad information being given out by the employee.",
       "Phone messages are often unclear or incomplete."
     ],
-    "meets requirements": [
+    ok: [
       "Takes messages, writes correspondence, deals with customers and coworkers with sufficient attention to detail.",
       "Reports are accurate and well written using proper grammar and punctuation."
     ],
-    "exceeds requirements": [
+    good: [
       "Students and coworkers feel comfortable coming to this employee with questions and comments.",
       "Comes to supervisor department head with any questions that employee does not know off-hand."
     ],
@@ -262,19 +275,19 @@ const data = {
     ]
   },
   "problem solving": {
-    poor: [
+    unacceptable: [
       "Frequently comes to the wrong conclusions and assumes things.",
       "Did not make sure that all subordinates were productive at all times, which is a daily requirement of this job."
     ],
-    "needs improvement": [
+    low: [
       "Needs to develop analytical skills necessary to weigh options and choose the best way to deal with situations.",
       "Spends too much time focusing on less important aspects of daily job."
     ],
-    "meets requirements": [
+    ok: [
       "Often offers workable solutions to problems.",
       "Uses good judgment in solving problems and working with others."
     ],
-    "exceeds requirements": [
+    good: [
       "Can zero in on the cause of problems and offer creative solutions.",
       "Displays strong analytical skills."
     ],
@@ -285,22 +298,22 @@ const data = {
     ]
   },
   "project planning": {
-    poor: [
+    unacceptable: [
       "Work projects have suffered from lack of follow-through.",
       "Important documentation for projects has been lost or destroyed erroneously.",
       "Does not plan ahead to meet work deadlines."
     ],
-    "needs improvement": [
+    low: [
       "Does not keep supervisor informed of potential problems as they arise.",
-      "Project plans are poorly designed.",
+      "Project plans are unacceptablely designed.",
       "Project plans are not carried out as assigned or on time."
     ],
-    "meets requirements": [
+    ok: [
       "Prepares project plans on time and in sufficient detail.",
       "End of year statements are complete and accurate.",
       "Maintains and monitors progress of project plan in order to stay on target."
     ],
-    "exceeds requirements": [
+    good: [
       "Gets the most out of scarce resources.",
       "Projects normally are within budget and are well planned."
     ],
@@ -311,21 +324,21 @@ const data = {
     ]
   },
   "work group management": {
-    poor: [
+    unacceptable: [
       "Dictates to others rather than involving them in the decision making.",
       "Has reduced subordinates to tears.",
       "Yells and screams at subordinates."
     ],
-    "needs improvement": [
+    low: [
       "Assumes others should know what to do and how to do it with little or no training.",
       "Frequently becomes impatient when things aren't done their way."
     ],
-    "meets requirements": [
+    ok: [
       "Draws on the knowledge and skills of others.",
       "Available when needed and has an open door policy for subordinates.",
       "Assigns work fairly and resolves disputes and grievances of subordinates fairly."
     ],
-    "exceeds requirements": [
+    good: [
       "Very supportive of coworkers and subordinates attempts at improvement.",
       "Sets an example for subordinates in following departmental and university policy and procedures."
     ],
@@ -335,21 +348,21 @@ const data = {
     ]
   },
   "service to clients public": {
-    poor: [
+    unacceptable: [
       "Frequently rude and impolite.",
-      "Demonstrates poor customer relations skills.",
+      "Demonstrates unacceptable customer relations skills.",
       "Frequently carries on personal conversations in person or on the phone while clients and customers wait."
     ],
-    "needs improvement": [
+    low: [
       "Gets annoyed with clients who ask too many questions.",
       "Frequently forgets to follow through on customer requests."
     ],
-    "meets requirements": [
+    ok: [
       "Usually maintains a competent and professional demeanor in dealing with clients and the public.",
       "Courteous and knowledgeable.",
       "Tries to be helpful."
     ],
-    "exceeds requirements": [
+    good: [
       "Answers all questions promptly and accurately.",
       "Forwards any complaints or problems to supervisor immediately."
     ],
@@ -359,22 +372,22 @@ const data = {
     ]
   },
   "performance planning": {
-    poor: [
+    unacceptable: [
       "Had one unrated Performance Planning and Review rating in this rating year.",
       "Did not conduct timely planning sessions on all subordinates."
     ],
-    "needs improvement": [
+    low: [
       "Although planning sessions were completed, they were not completed within Civil Service mandated timelines.",
       "Did not meet personally with the employee to go over appraisals."
     ],
-    "meets requirements": [
+    ok: [
       "All PPR's were completed by the anniversary dates of all subordinates.",
       "Works with employees in setting mutual goals.",
       "Makes an effort to counsel employees and document performance (both positive and negative) throughout the year.",
       "Maintains a supervisor file that contains documentation of performance on each subordinate throughout the year.",
       "Has had no unrated PPR's or untimely planning sessions in this rating year. Always completes PPR's well within the 60 day deadline date."
     ],
-    "exceeds requirements": [
+    good: [
       "Is proactive in performance evaluations.",
       "Has an open door policy for all subordinates."
     ],

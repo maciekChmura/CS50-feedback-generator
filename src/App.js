@@ -202,9 +202,9 @@ class App extends React.Component {
           handleTextAreaChange={this.handleTextAreaChange}
         />
         <Synonyms />
-        {/* <div>
+        <div>
           <button onClick={this.handlePushData}>push data</button>
-        </div> */}
+        </div>
       </div>
     );
   }
