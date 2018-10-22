@@ -122,3 +122,9 @@ input[class="unacceptable"]:checked + svg,
 input[class="unacceptable"]:focus + svg {
   fill: rgb(239, 42, 16);
 }
+
+input:disabled + svg,
+input:disabled:checked + svg,
+input:disabled:hover + svg {
+  fill: rgba(85, 85, 85, 0.4);
+}
