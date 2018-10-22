@@ -8,7 +8,8 @@ class Synonyms extends React.Component {
 
     this.state = {
       word: "",
-      synonyms: []
+      synonyms: [],
+      APIError: ""
     };
   }
 
@@ -18,11 +19,31 @@ class Synonyms extends React.Component {
 
   handleSearch = event => {
     event.preventDefault();
+    this.setState({
+      APIError: "",
+      synonyms: []
+    });
+    let responseData;
     fetch(`http://words.bighugelabs.com/api/2/${key}/${this.state.word}/json`)
-      .then(data => data.json())
-      .then(data => data.noun.syn.slice(0, 6))
-      .then(data => this.setState({ synonyms: data }))
-      .catch(error => this.setState({ synonyms: ["nothing found"] }));
+      .then(res => {
+        responseData = res;
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ synonyms: data.noun.syn.slice(0, 6) });
+      })
+      .catch(err => {
+        switch (responseData.status) {
+          case 500:
+            this.setState({
+              APIError: `Synonyms API Error: ${responseData.statusText}`
+            });
+            break;
+          default:
+            this.setState({ APIError: responseData.statusText });
+            break;
+        }
+      });
   };
 
   render() {
@@ -47,6 +68,7 @@ class Synonyms extends React.Component {
             );
           })}
         </ul>
+        <p>{this.state.APIError}</p>
       </form>
     );
   }
