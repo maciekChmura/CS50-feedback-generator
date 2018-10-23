@@ -19,62 +19,62 @@ class App extends React.Component {
       selectors: [
         {
           name: "professional skills",
-          checked: "meets requirements",
+          checked: "ok",
           used: true
         },
         {
           name: "quality of work",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "attitude and dedication",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "reliability",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "cooperativeness",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "adaptability",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "communication",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "problem solving",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "project planning",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "work group management",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "service to clients public",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         },
         {
           name: "performance planning",
-          checked: "meets requirements",
+          checked: "ok",
           used: false
         }
       ],
