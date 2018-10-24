@@ -171,39 +171,47 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <InputName
-          name={this.state.name}
-          handleNameChange={this.handleNameChange}
-        />
-        <InputGender handleGenderChange={this.handleGenderChange} />
-        {this.state.selectors.map((selector, index) => {
-          return (
-            <Selector
-              key={selector.name}
-              name={selector.name}
-              checkedRadio={selector.checked}
-              handleClick={data => this.handleClick(data, index)}
-              handleCheck={data => this.handleCheck(data, index)}
-              used={selector.used}
+      <div className="grid-container">
+        <div className="grid-container-left">
+          <div className="input-buttons">
+            <InputName className="input-name"
+              name={this.state.name}
+              handleNameChange={this.handleNameChange}
             />
-          );
-        })}
+            <InputGender className="input-gender" handleGenderChange={this.handleGenderChange} />
+          </div>
+          <div className="selectors">
+            {this.state.selectors.map((selector, index) => {
+              return (
+                <Selector
+                  key={selector.name}
+                  name={selector.name}
+                  checkedRadio={selector.checked}
+                  handleClick={data => this.handleClick(data, index)}
+                  handleCheck={data => this.handleCheck(data, index)}
+                  used={selector.used}
+                />
+              );
+            })}
+          </div>
 
-        <Generate
-          handleGenerate={this.handleGenerate}
-          inputStatus={this.checkInput()}
-        />
-        <div>
-          <button onClick={this.handleReset}>Reset</button>
         </div>
-        <TextArea
-          generated={this.state.generated}
-          handleTextAreaChange={this.handleTextAreaChange}
-        />
-        <Synonyms />
-        <div>
-          <button onClick={this.handlePushData}>push data</button>
+        <div className="grid-container-right">
+          <Generate
+            handleGenerate={this.handleGenerate}
+            inputStatus={this.checkInput()}
+          />
+          <div className="test">
+            <button onClick={this.handleReset}>Reset</button>
+          </div>
+          <TextArea
+            generated={this.state.generated}
+            handleTextAreaChange={this.handleTextAreaChange}
+          />
+          <Synonyms />
+          <div>
+            <button onClick={this.handlePushData}>push data</button>
+          </div>
         </div>
       </div>
     );
