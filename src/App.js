@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import styled from 'styled-components'
 import Selector from "./Selector";
 import InputName from "./InputName";
 import InputGender from "./InputGender";
@@ -9,6 +10,31 @@ import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
 import Generate from "./Generate";
 import Synonyms from "./Synonyms";
+
+const MainGrid = styled.div`
+  margin: 16px;
+  display: grid;
+  grid-template-columns: 480px 480px;
+  grid-gap:20px;
+`
+const LeftColumn = styled.div`
+  grid-column-start:1;
+  grid-column-end:2;
+  display:grid;
+  grid-template-rows:200px 50px 700px;
+`
+
+const InputButtons = styled.div`
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: flex;
+`
+
+const Selectors = styled.div`
+  grid-row-start:3;
+  display:flex;
+  flex-direction: column;
+`
 
 class App extends React.Component {
   constructor(props) {
@@ -171,16 +197,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="grid-container">
-        <div className="grid-container-left">
-          <div className="input-buttons">
-            <InputName className="input-name"
+      <MainGrid >
+        <LeftColumn>
+          <InputButtons>
+            <InputName
               name={this.state.name}
               handleNameChange={this.handleNameChange}
             />
             <InputGender className="input-gender" handleGenderChange={this.handleGenderChange} />
-          </div>
-          <div className="selectors">
+          </InputButtons>
+          <Selectors>
             {this.state.selectors.map((selector, index) => {
               return (
                 <Selector
@@ -193,10 +219,9 @@ class App extends React.Component {
                 />
               );
             })}
-          </div>
-
-        </div>
-        <div className="grid-container-right">
+          </Selectors>
+        </LeftColumn>
+        <div className="right-column">
           <Generate
             handleGenerate={this.handleGenerate}
             inputStatus={this.checkInput()}
@@ -213,7 +238,7 @@ class App extends React.Component {
             <button onClick={this.handlePushData}>push data</button>
           </div>
         </div>
-      </div>
+      </MainGrid >
     );
   }
 }
