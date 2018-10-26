@@ -16,7 +16,7 @@ class InputGender extends React.Component {
           onChange={this.handleGenderChange}
           onBlur={this.handleGenderChange}
         >
-          <option value="">plese select gender</option>
+          <option value="">Please pick gender</option>
           <option value="male">male</option>
           <option value="female">female</option>
         </select>

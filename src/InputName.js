@@ -1,4 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+
+const Input = styled.input`
+  width: 240px;
+  margin-right: 10px;
+`;
 
 class InputName extends React.Component {
   constructor(props) {
@@ -11,14 +17,12 @@ class InputName extends React.Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          onChange={this.handleNameChange}
-          value={this.props.name}
-          placeholder="Name"
-        />
-      </form>
+      <Input
+        type="text"
+        onChange={this.handleNameChange}
+        value={this.props.name}
+        placeholder="Name"
+      />
     );
   }
 }

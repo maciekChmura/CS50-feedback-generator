@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import styled from 'styled-components'
+import styled from "styled-components";
 import Selector from "./Selector";
 import InputName from "./InputName";
 import InputGender from "./InputGender";
@@ -12,29 +12,38 @@ import Generate from "./Generate";
 import Synonyms from "./Synonyms";
 
 const MainGrid = styled.div`
-  margin: 16px;
+  /* margin: 16px; */
   display: grid;
-  grid-template-columns: 480px 480px;
-  grid-gap:20px;
-`
+  grid-template-columns: 480px 40px 480px;
+`;
 const LeftColumn = styled.div`
-  grid-column-start:1;
-  grid-column-end:2;
-  display:grid;
-  grid-template-rows:200px 50px 700px;
-`
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-template-rows: 200px 50px 700px;
+  /* grid-template-columns: 1fr; */
+`;
 
 const InputButtons = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
+  width: 480px;
   display: flex;
-`
+  /* justify-content: space-between; */
+`;
 
 const Selectors = styled.div`
-  grid-row-start:3;
-  display:flex;
+  grid-row-start: 3;
+  display: flex;
   flex-direction: column;
-`
+`;
+
+const RightColumn = styled.div`
+  display: grid;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-template-rows: 200px 50px 700px;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -197,14 +206,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <MainGrid >
+      <MainGrid>
         <LeftColumn>
           <InputButtons>
             <InputName
               name={this.state.name}
               handleNameChange={this.handleNameChange}
             />
-            <InputGender className="input-gender" handleGenderChange={this.handleGenderChange} />
+            <InputGender
+              className="input-gender"
+              handleGenderChange={this.handleGenderChange}
+            />
           </InputButtons>
           <Selectors>
             {this.state.selectors.map((selector, index) => {
@@ -221,7 +233,7 @@ class App extends React.Component {
             })}
           </Selectors>
         </LeftColumn>
-        <div className="right-column">
+        <RightColumn>
           <Generate
             handleGenerate={this.handleGenerate}
             inputStatus={this.checkInput()}
@@ -237,8 +249,8 @@ class App extends React.Component {
           <div>
             <button onClick={this.handlePushData}>push data</button>
           </div>
-        </div>
-      </MainGrid >
+        </RightColumn>
+      </MainGrid>
     );
   }
 }
