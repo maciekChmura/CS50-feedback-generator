@@ -10,30 +10,50 @@ import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
 import GenerateButton from "./Generate";
 import Synonyms from "./Synonyms";
+import SVGLogo from "./SVGLogo"
 
 const MainGridWrapper = styled.div`
   /* margin: 16px; */
   display: grid;
   grid-template-columns: 480px 40px 480px;
+  grid-template-rows: 260px 700px;
 `;
+
+const HeaderWrapper = styled.div`
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-columns: 260px 740px; 
+  grid-template-rows: 260px;
+`
+
+const Header = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+`
+
 const LeftColumnWrapper = styled.div`
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-template-rows: 200px 50px 860px;
+  grid-template-rows: 50px 860px;
   /* grid-template-columns: 1fr; */
 `;
 
 const InputButtonsWrapper = styled.div`
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   width: 480px;
   display: flex;
   justify-content: space-between;
 `;
 
 const SelectorsWrapper = styled.div`
-  grid-row-start: 3;
+  grid-row-start: 2;
   display: flex;
   flex-direction: column;
 `;
@@ -42,26 +62,26 @@ const RightColumnWrapper = styled.div`
   display: grid;
   grid-column-start: 3;
   grid-column-end: 4;
-  grid-template-rows: 200px 50px 400px 200px 100px;
+  grid-template-rows: 50px 400px 200px 100px;
 `;
 
 const GenerateButtonsWrapper = styled.div`
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
   width: 480px;
   display: flex;
   justify-content: space-between;
 `;
 
 const TextAreaWrapper = styled.div`
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
   width: 480px;
 `;
 
 const SynonymsWrapper = styled.div`
-  grid-row-start: 4;
-  grid-row-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
   width: 480px;
   padding-top: 16px;
 `;
@@ -238,6 +258,10 @@ class App extends React.Component {
   render() {
     return (
       <MainGridWrapper>
+        <HeaderWrapper>
+          <SVGLogo>logo</SVGLogo>
+          <Header>header</Header>
+        </HeaderWrapper>
         <LeftColumnWrapper>
           <InputButtonsWrapper>
             <InputName
@@ -270,9 +294,9 @@ class App extends React.Component {
               handleGenerate={this.handleGenerate}
               inputStatus={this.checkInput()}
             />
-            <div className="test">
+            {/* <div className="test">
               <button onClick={this.handleReset}>Reset</button>
-            </div>
+            </div> */}
           </GenerateButtonsWrapper>
           <TextAreaWrapper>
             <TextArea
@@ -283,9 +307,9 @@ class App extends React.Component {
           <SynonymsWrapper>
             <Synonyms />
           </SynonymsWrapper>
-          <PushButton>
+          {/* <PushButton>
             <button onClick={this.handlePushData}>push data</button>
-          </PushButton>
+          </PushButton> */}
         </RightColumnWrapper>
       </MainGridWrapper>
     );

@@ -3,8 +3,18 @@ import styled from "styled-components";
 
 const key = process.env.KEY;
 
+const Form = styled.form`
+  padding-top:20px;
+`
+
+const Title = styled.p`
+  font-style: italic;
+  font-size: 1.2em;
+`
+
 const SynonymsText = styled.p`
   font-style: italic;
+  font-size: 1.2em;
 `;
 
 class Synonyms extends React.Component {
@@ -53,9 +63,9 @@ class Synonyms extends React.Component {
 
   render() {
     return (
-      <form className="synonyms-box">
+      <Form>
         <div>
-          <p>Search for synonyms</p>
+          <Title>Search for synonyms:</Title>
         </div>
         <input
           type="text"
@@ -76,7 +86,7 @@ class Synonyms extends React.Component {
           })}
         </ul> */}
         <p>{this.state.APIError}</p>
-      </form>
+      </Form>
     );
   }
 }

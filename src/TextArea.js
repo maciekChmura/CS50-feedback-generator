@@ -4,6 +4,7 @@ import styled from "styled-components";
 const Text = styled.textarea`
   width: 480px;
   height: 400px;
+  font-size:1.1em;
 `;
 
 class TextArea extends React.Component {
