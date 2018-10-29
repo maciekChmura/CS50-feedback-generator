@@ -6,8 +6,9 @@ const SelectorForm = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 58px;
-  width: 500px;
+  height: 48px;
+  width: 480px;
+  margin-bottom: 8px;
 
   .child {
     flex: none;
@@ -41,22 +42,6 @@ const SelectorForm = styled.form`
     height: 1px;
   }
 
-  .textarea {
-    min-height: 400px;
-    min-width: 600px;
-  }
-
-  .synonyms-box {
-    height: 320px;
-    border: 0px;
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 60px;
-  }
-
-  .synonyms-list-item {
-    margin-left: 10px;
-  }
   svg {
     fill: rgb(105, 105, 105);
     height: 3.6rem;
@@ -72,6 +57,7 @@ const SelectorForm = styled.form`
   input[type="radio"] + svg {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
+    width: 46px;
   }
 
   input + svg {

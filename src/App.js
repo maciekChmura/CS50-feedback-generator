@@ -8,41 +8,67 @@ import TextArea from "./TextArea";
 import { database } from "./firebase";
 import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
-import Generate from "./Generate";
+import GenerateButton from "./Generate";
 import Synonyms from "./Synonyms";
 
-const MainGrid = styled.div`
+const MainGridWrapper = styled.div`
   /* margin: 16px; */
   display: grid;
   grid-template-columns: 480px 40px 480px;
 `;
-const LeftColumn = styled.div`
+const LeftColumnWrapper = styled.div`
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-template-rows: 200px 50px 700px;
+  grid-template-rows: 200px 50px 860px;
   /* grid-template-columns: 1fr; */
 `;
 
-const InputButtons = styled.div`
+const InputButtonsWrapper = styled.div`
   grid-row-start: 2;
   grid-row-end: 3;
   width: 480px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 `;
 
-const Selectors = styled.div`
+const SelectorsWrapper = styled.div`
   grid-row-start: 3;
   display: flex;
   flex-direction: column;
 `;
 
-const RightColumn = styled.div`
+const RightColumnWrapper = styled.div`
   display: grid;
   grid-column-start: 3;
   grid-column-end: 4;
-  grid-template-rows: 200px 50px 700px;
+  grid-template-rows: 200px 50px 400px 200px 100px;
+`;
+
+const GenerateButtonsWrapper = styled.div`
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const TextAreaWrapper = styled.div`
+  grid-row-start: 3;
+  grid-row-end: 4;
+  width: 480px;
+`;
+
+const SynonymsWrapper = styled.div`
+  grid-row-start: 4;
+  grid-row-end: 5;
+  width: 480px;
+  padding-top: 16px;
+`;
+
+const PushButton = styled.div`
+  grid-row-start: 5;
+  grid-row-end: 6;
 `;
 
 class App extends React.Component {
@@ -181,7 +207,12 @@ class App extends React.Component {
               })
               .join(" ");
             textArray.push(singleProperty);
-            const generatedText = textArray.join(" ");
+            let generatedText = "";
+            if (!this.checkInput()) {
+              generatedText = "Please provide name and gender.";
+            } else {
+              generatedText = textArray.join(" ");
+            }
             this.setState({ generated: generatedText });
           });
       }
@@ -206,9 +237,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <MainGrid>
-        <LeftColumn>
-          <InputButtons>
+      <MainGridWrapper>
+        <LeftColumnWrapper>
+          <InputButtonsWrapper>
             <InputName
               name={this.state.name}
               handleNameChange={this.handleNameChange}
@@ -217,8 +248,8 @@ class App extends React.Component {
               className="input-gender"
               handleGenderChange={this.handleGenderChange}
             />
-          </InputButtons>
-          <Selectors>
+          </InputButtonsWrapper>
+          <SelectorsWrapper>
             {this.state.selectors.map((selector, index) => {
               return (
                 <Selector
@@ -231,26 +262,32 @@ class App extends React.Component {
                 />
               );
             })}
-          </Selectors>
-        </LeftColumn>
-        <RightColumn>
-          <Generate
-            handleGenerate={this.handleGenerate}
-            inputStatus={this.checkInput()}
-          />
-          <div className="test">
-            <button onClick={this.handleReset}>Reset</button>
-          </div>
-          <TextArea
-            generated={this.state.generated}
-            handleTextAreaChange={this.handleTextAreaChange}
-          />
-          <Synonyms />
-          <div>
+          </SelectorsWrapper>
+        </LeftColumnWrapper>
+        <RightColumnWrapper>
+          <GenerateButtonsWrapper>
+            <GenerateButton
+              handleGenerate={this.handleGenerate}
+              inputStatus={this.checkInput()}
+            />
+            <div className="test">
+              <button onClick={this.handleReset}>Reset</button>
+            </div>
+          </GenerateButtonsWrapper>
+          <TextAreaWrapper>
+            <TextArea
+              generated={this.state.generated}
+              handleTextAreaChange={this.handleTextAreaChange}
+            />
+          </TextAreaWrapper>
+          <SynonymsWrapper>
+            <Synonyms />
+          </SynonymsWrapper>
+          <PushButton>
             <button onClick={this.handlePushData}>push data</button>
-          </div>
-        </RightColumn>
-      </MainGrid>
+          </PushButton>
+        </RightColumnWrapper>
+      </MainGridWrapper>
     );
   }
 }

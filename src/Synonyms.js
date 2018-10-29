@@ -1,6 +1,11 @@
 import React from "react";
+import styled from "styled-components";
 
 const key = process.env.KEY;
+
+const SynonymsText = styled.p`
+  font-style: italic;
+`;
 
 class Synonyms extends React.Component {
   constructor(props) {
@@ -59,7 +64,9 @@ class Synonyms extends React.Component {
           placeholder="search for..."
         />
         <button onClick={this.handleSearch}>search</button>
-        <ul>
+        <SynonymsText>{this.state.synonyms.join(", ")}</SynonymsText>
+
+        {/* <ul>
           {this.state.synonyms.map(synonym => {
             return (
               <li className="synonyms-list-item" key={synonym}>
@@ -67,7 +74,7 @@ class Synonyms extends React.Component {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
         <p>{this.state.APIError}</p>
       </form>
     );

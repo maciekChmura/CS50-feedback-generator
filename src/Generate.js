@@ -1,30 +1,18 @@
 import React from "react";
+import styled from "styled-components";
 
-class Generate extends React.Component {
+const Button = styled.button`
+  width: 300px;
+`;
+
+class GenerateButton extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
-    {
-      if (!this.props.inputStatus) {
-        return (
-          <div>
-            <button onClick={this.props.handleGenerate} disabled>
-              Generate
-            </button>
-            <span>Please provide name and gender</span>
-          </div>
-        );
-      } else {
-        return (
-          <div>
-            <button onClick={this.props.handleGenerate}>Generate</button>
-          </div>
-        );
-      }
-    }
+    return <Button onClick={this.props.handleGenerate}>Generate</Button>;
   }
 }
 
-export default Generate;
+export default GenerateButton;
