@@ -67,10 +67,24 @@ const Center = styled.div`
 `;
 
 class CheckBox extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  handleCheck = event => {
+    this.props.handleCheck(event);
+  };
+
   render() {
     return (
       <Center>
-        <input type="checkbox" id="cbx" style={{ display: "none" }} />
+        <input
+          type="checkbox"
+          id="cbx"
+          style={{ display: "none" }}
+          onChange={event => this.handleCheck(event)}
+          checked={this.props.used}
+        />
         <label htmlFor="cbx" className="toggle">
           <span />
         </label>

@@ -17,7 +17,7 @@ const Main = styled.p`
 
 const Secnd = styled.p`
   font-size: 70px;
-  margin: 0;
+  margin-top: -30px;
   text-align: right;
 `;
 

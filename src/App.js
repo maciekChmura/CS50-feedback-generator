@@ -182,6 +182,7 @@ class App extends React.Component {
   };
 
   handleCheck = (data, index) => {
+    console.log(data, index);
     this.setState(state => ({
       selectors: state.selectors.map((selector, i) => {
         if (index === i) {
@@ -279,6 +280,7 @@ class App extends React.Component {
           </InputButtonsWrapper>
           <SelectorsWrapper>
             {this.state.selectors.map((selector, index) => {
+              // console.log(selector, index);
               return (
                 <Selector
                   key={selector.name}

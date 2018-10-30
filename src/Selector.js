@@ -45,11 +45,7 @@ const SelectorForm = styled.form`
 
   svg {
     fill: rgb(105, 105, 105);
-    /* height: 3.6rem;
-    width: 3rem;
-    margin: 0.2rem; */
-    /* width: 20px; */
-    height: 40px;
+    height: 36px;
   }
 
   input[type="radio"] {
@@ -114,8 +110,9 @@ class Selector extends React.Component {
     this.props.handleClick(event.target.value);
   };
 
-  handleCheck = event => {
-    this.props.handleCheck(event.target.checked);
+  handleCheck = data => {
+    this.props.handleCheck(data.target.checked);
+    console.log(data.target.checked);
   };
 
   render() {
@@ -126,7 +123,10 @@ class Selector extends React.Component {
           onChange={this.handleCheck}
           checked={this.props.used}
         />
-        <CheckBox onChange={this.handleCheck} checked={this.props.used} />
+        <CheckBox
+          handleCheck={data => this.handleCheck(data)}
+          used={this.props.used}
+        />
         <div className="child label">
           <span>{this.props.name}:</span>
           <span className="picked-selector-value">
