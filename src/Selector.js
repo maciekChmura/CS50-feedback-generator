@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import svgFace from "./svgFace";
+import CheckBox from "./CheckBox";
 
 const SelectorForm = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 48px;
-  width: 480px;
+  height: 44px;
+  width: 440px;
   margin-bottom: 8px;
 
   .child {
@@ -16,7 +17,7 @@ const SelectorForm = styled.form`
   }
 
   .label {
-    width: 200px;
+    width: 180px;
     float: right;
     display: flex;
     flex-direction: column;
@@ -30,7 +31,7 @@ const SelectorForm = styled.form`
 
   .button-parent {
     display: flex;
-    width: 260px;
+    width: 220px;
   }
 
   .unacceptable,
@@ -44,9 +45,11 @@ const SelectorForm = styled.form`
 
   svg {
     fill: rgb(105, 105, 105);
-    height: 3.6rem;
-    width: 3.6rem;
-    margin: 0.2rem;
+    /* height: 3.6rem;
+    width: 3rem;
+    margin: 0.2rem; */
+    /* width: 20px; */
+    height: 40px;
   }
 
   input[type="radio"] {
@@ -67,31 +70,31 @@ const SelectorForm = styled.form`
   input[class="outstanding"]:hover + svg,
   input[class="outstanding"]:checked + svg,
   input[class="outstanding"]:focus + svg {
-    fill: rgb(0, 109, 217);
+    fill: rgb(58, 77, 163);
   }
 
   input[class="good"]:hover + svg,
   input[class="good"]:checked + svg,
   input[class="good"]:focus + svg {
-    fill: rgb(0, 204, 79);
+    fill: rgb(71, 167, 209);
   }
 
   input[class="ok"]:hover + svg,
   input[class="ok"]:checked + svg,
   input[class="ok"]:focus + svg {
-    fill: rgb(232, 214, 0);
+    fill: rgb(78, 215, 186);
   }
 
   input[class="low"]:hover + svg,
   input[class="low"]:checked + svg,
   input[class="low"]:focus + svg {
-    fill: rgb(229, 132, 0);
+    fill: rgb(242, 140, 119);
   }
 
   input[class="unacceptable"]:hover + svg,
   input[class="unacceptable"]:checked + svg,
   input[class="unacceptable"]:focus + svg {
-    fill: rgb(239, 42, 16);
+    fill: rgb(237, 87, 180);
   }
 
   input:disabled + svg,
@@ -123,6 +126,7 @@ class Selector extends React.Component {
           onChange={this.handleCheck}
           checked={this.props.used}
         />
+        <CheckBox onChange={this.handleCheck} checked={this.props.used} />
         <div className="child label">
           <span>{this.props.name}:</span>
           <span className="picked-selector-value">

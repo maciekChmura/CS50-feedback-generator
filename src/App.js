@@ -10,13 +10,14 @@ import data from "./data";
 import pickRandomFromArray from "./pickRandomFromArray";
 import GenerateButton from "./Generate";
 import Synonyms from "./Synonyms";
-import SVGLogo from "./SVGLogo"
+import SVGLogo from "./SVGLogo";
+import Header from "./Header";
 
 const MainGridWrapper = styled.div`
-  /* margin: 16px; */
+  margin: 20px;
   display: grid;
-  grid-template-columns: 480px 40px 480px;
-  grid-template-rows: 260px 700px;
+  grid-template-columns: 440px 40px 480px;
+  grid-template-rows: 280px 700px;
 `;
 
 const HeaderWrapper = styled.div`
@@ -25,16 +26,16 @@ const HeaderWrapper = styled.div`
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-columns: 260px 740px; 
-  grid-template-rows: 260px;
-`
+  grid-template-columns: 260px 700px;
+  grid-template-rows: 280px;
+`;
 
-const Header = styled.div`
+const HeaderText = styled.div`
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
-`
+`;
 
 const LeftColumnWrapper = styled.div`
   display: grid;
@@ -47,12 +48,13 @@ const LeftColumnWrapper = styled.div`
 const InputButtonsWrapper = styled.div`
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 480px;
+  width: 440px;
   display: flex;
   justify-content: space-between;
 `;
 
 const SelectorsWrapper = styled.div`
+  margin-top: 10px;
   grid-row-start: 2;
   display: flex;
   flex-direction: column;
@@ -259,8 +261,10 @@ class App extends React.Component {
     return (
       <MainGridWrapper>
         <HeaderWrapper>
-          <SVGLogo>logo</SVGLogo>
-          <Header>header</Header>
+          <SVGLogo />
+          <HeaderText>
+            <Header />
+          </HeaderText>
         </HeaderWrapper>
         <LeftColumnWrapper>
           <InputButtonsWrapper>
