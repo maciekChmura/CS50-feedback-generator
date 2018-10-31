@@ -29,7 +29,7 @@ input {
   grid-row-end: 3;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 220px 50px 400px
+  grid-template-rows: 220px 50px 400px;
 }
 .input-buttons {
   grid-column-start: 1;
@@ -58,9 +58,6 @@ input {
   grid-row-end: 3;
   display: grid;
 }
-
-
-
 
 .selector {
   display: flex;

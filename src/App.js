@@ -16,7 +16,7 @@ import Header from "./Header";
 const MainGridWrapper = styled.div`
   margin: 20px;
   display: grid;
-  grid-template-columns: 440px 40px 480px;
+  grid-template-columns: 490px 40px 480px;
   grid-template-rows: 280px 700px;
 `;
 
@@ -26,7 +26,7 @@ const HeaderWrapper = styled.div`
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  grid-template-columns: 260px 700px;
+  grid-template-columns: 260px 750px;
   grid-template-rows: 280px;
 `;
 
@@ -46,6 +46,7 @@ const LeftColumnWrapper = styled.div`
 `;
 
 const InputButtonsWrapper = styled.div`
+  margin-left: 50px;
   grid-row-start: 1;
   grid-row-end: 2;
   width: 440px;

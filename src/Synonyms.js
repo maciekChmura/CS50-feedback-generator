@@ -4,17 +4,21 @@ import styled from "styled-components";
 const key = process.env.KEY;
 
 const Form = styled.form`
-  padding-top:20px;
-`
+  padding-top: 20px;
+`;
 
 const Title = styled.p`
   font-style: italic;
   font-size: 1.2em;
-`
+`;
 
 const SynonymsText = styled.p`
   font-style: italic;
   font-size: 1.2em;
+`;
+
+const SearchButton = styled.button`
+  margin-left: 20px;
 `;
 
 class Synonyms extends React.Component {
@@ -73,18 +77,8 @@ class Synonyms extends React.Component {
           value={this.state.word}
           placeholder="search for..."
         />
-        <button onClick={this.handleSearch}>search</button>
+        <SearchButton onClick={this.handleSearch}>search</SearchButton>
         <SynonymsText>{this.state.synonyms.join(", ")}</SynonymsText>
-
-        {/* <ul>
-          {this.state.synonyms.map(synonym => {
-            return (
-              <li className="synonyms-list-item" key={synonym}>
-                {synonym}
-              </li>
-            );
-          })}
-        </ul> */}
         <p>{this.state.APIError}</p>
       </Form>
     );

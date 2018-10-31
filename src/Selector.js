@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import svgFace from "./svgFace";
 import CheckBox from "./CheckBox";
+import Toggle from "react-toggle";
 
 const SelectorForm = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 44px;
-  width: 440px;
+  width: 490px;
   margin-bottom: 8px;
 
   .child {
@@ -17,7 +18,7 @@ const SelectorForm = styled.form`
   }
 
   .label {
-    width: 180px;
+    width: 200px;
     float: right;
     display: flex;
     flex-direction: column;
@@ -112,20 +113,15 @@ class Selector extends React.Component {
 
   handleCheck = data => {
     this.props.handleCheck(data.target.checked);
-    console.log(data.target.checked);
   };
 
   render() {
     return (
       <SelectorForm>
-        <input
-          type="checkbox"
+        <Toggle
+          defaultChecked={this.props.used}
+          icons={false}
           onChange={this.handleCheck}
-          checked={this.props.used}
-        />
-        <CheckBox
-          handleCheck={data => this.handleCheck(data)}
-          used={this.props.used}
         />
         <div className="child label">
           <span>{this.props.name}:</span>
