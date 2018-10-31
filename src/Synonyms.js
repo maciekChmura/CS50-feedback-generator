@@ -42,7 +42,7 @@ class Synonyms extends React.Component {
     });
     let responseData;
     fetch(
-      `http://words.bighugelabs.com/api/2/6a48b6a1191c34f923e066d7105383be/${
+      `https://words.bighugelabs.com/api/2/6a48b6a1191c34f923e066d7105383be/${
         this.state.word
       }/json`
     )
