@@ -41,7 +41,7 @@ const LeftColumnWrapper = styled.div`
   display: grid;
   grid-column-start: 1;
   grid-column-end: 2;
-  grid-template-rows: 50px 860px;
+  grid-template-rows: 50px 630px;
   /* grid-template-columns: 1fr; */
 `;
 
