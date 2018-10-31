@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import svgFace from "./svgFace";
-import CheckBox from "./CheckBox";
 import Toggle from "react-toggle";
 
 const SelectorForm = styled.form`

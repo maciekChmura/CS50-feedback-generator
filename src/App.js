@@ -183,7 +183,6 @@ class App extends React.Component {
   };
 
   handleCheck = (data, index) => {
-    console.log(data, index);
     this.setState(state => ({
       selectors: state.selectors.map((selector, i) => {
         if (index === i) {

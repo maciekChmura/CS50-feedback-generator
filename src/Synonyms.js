@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const key = process.env.KEY;
-
 const Form = styled.form`
   padding-top: 20px;
 `;
@@ -43,7 +41,11 @@ class Synonyms extends React.Component {
       synonyms: []
     });
     let responseData;
-    fetch(`http://words.bighugelabs.com/api/2/${key}/${this.state.word}/json`)
+    fetch(
+      `http://words.bighugelabs.com/api/2/6a48b6a1191c34f923e066d7105383be/${
+        this.state.word
+      }/json`
+    )
       .then(res => {
         responseData = res;
         return res.json();
