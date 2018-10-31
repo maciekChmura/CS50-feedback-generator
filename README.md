@@ -6,7 +6,7 @@
 > Probably not.  
 > But you will have more time to play in the game room. 🙌 🎮
 
-Elevator pitch aside...  
+Elevator pitch aside...🤦  
 Working app hosted [here](https://feedback-generator-21432.firebaseapp.com).  
 This app is my final project to a wonderful course from Harvard. [CS50](https://cs50.harvard.edu)
 
