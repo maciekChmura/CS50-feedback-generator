@@ -4,7 +4,7 @@
 > Sometimes it is hard to come up with accurate sentences and descriptive words.  
 > Is it moral to just put values next to a person and generate the feedback?  
 > Probably not.  
-> But you will have more time to play in the game room. 🙌 🎮
+> But you will have more time to coding/play in the game room. 🙌 🎮
 
 Elevator pitch aside...🤦  
 Working app hosted [here](https://feedback-generator-21432.firebaseapp.com).  
